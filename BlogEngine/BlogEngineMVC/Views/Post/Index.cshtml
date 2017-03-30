@@ -1,0 +1,13 @@
+﻿@model BlogEngineMVC.Modules.Posts.DAL.EF.be_Post
+
+@{
+    ViewBag.Title = @Model.Title;
+}
+
+
+   <h2> @Model.Title</h2>
+   <p>  @Model.DateCreated</p>
+   @*<p>  @Html.Raw(Model.Description) </p>*@
+
+    @Html.Raw(Model.PostContent);
+     
