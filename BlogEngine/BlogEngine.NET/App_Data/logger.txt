@@ -11,3 +11,9 @@ Installed package SimpleBlog by admin
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 Date: 3/30/2017 3:15:40 AM
 Installed package ElegantBlog by admin
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 3/30/2017 4:53:47 AM
+RazorHelper, ParseRazor, VirtualPath: /Custom/Widgets/TagCloud/widget.cshtml: Sequence contains no elements
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 3/30/2017 4:55:04 AM
+Error editing profile: Object reference not set to an instance of an object.
