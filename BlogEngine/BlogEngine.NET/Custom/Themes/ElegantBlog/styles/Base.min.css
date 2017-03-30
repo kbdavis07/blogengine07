@@ -1,0 +1,1952 @@
+﻿/*
+ * ElegantBlog Version 1.6
+ * HTML5, CSS3, Responsive Design
+ * Designed and Developed by Farzin Seyfolahi (@Seyfolahi)
+ * http://seyfolahi.net
+ *
+ * More detail:
+ * http://seyfolahi.net/en/post/elegantblog/
+ * 
+ * Versions History:
+ * http://seyfolahi.net/en/post/elegantblog/#VersionsHistory
+ *
+ * included:
+ * normalize.css v2.0.1 | MIT License | git.io/normalize
+ *
+ */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display: block;
+}
+
+audio, canvas, video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden] {
+    display: none;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Calibri, helvetica, sans-serif, Arial;
+}
+
+a:focus, a:active, a:hover {
+    outline: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 7px;
+    -moz-box-shadow: 0 1px 2px #CCC;
+    -webkit-box-shadow: 0 1px 2px #CCC;
+    box-shadow: 0 1px 2px #CCC;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+    font-size: 80%;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    max-width: 100%;
+}
+
+button, input {
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, pre, p, blockquote, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    font-family: inherit;
+}
+
+A, A:visited {
+    color: #07538e;
+    text-decoration: none;
+}
+
+A:hover, A:active {
+    color: #0e72bf;
+}
+
+a[href^="\/file.axd"] {
+    font-weight: bold;
+    background: url(/themes/elegantblog/download.png) no-repeat right center;
+    padding-right: 15px;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+ul {
+    list-style-image: url(../img/bullet.png);
+}
+
+.Right {
+    float: right;
+}
+
+.Left {
+    float: Left;
+}
+
+A {
+    text-decoration: none;
+}
+
+.Clear {
+    clear: both;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 0;
+    line-height: 1px;
+    font-size: 1px;
+}
+
+.ClearFix:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+blockquote {
+    border-left: 4px solid #07538e;
+    background: #F1F1F1;
+    padding: 10px 15px;
+    margin: 10px 5px 10px 15px;
+    color: #07538e;
+    -moz-box-shadow: 0 2px 3px #CCC;
+    -webkit-box-shadow: 0 2px 3px #CCC;
+    box-shadow: 0 2px 3px #CCC;
+}
+
+blockquote A {
+    font-weight: bold;
+}
+
+blockquote strong {
+    color: #222;
+}
+
+img {
+    border: none;
+}
+
+input[type=text], input[type=pasword] {
+    width: 150px;
+    height: 20px;
+    padding: 2px;
+    border: 1px solid #CCC;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 3px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+select {
+    width: 156px;
+    margin-bottom: 2px;
+    height: 26px;
+    padding: 2px;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #CCC;
+    font-size: 13px;
+    color: #444;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+textarea {
+    min-width: 80%;
+    min-height: 150px;
+    max-height: 200px;
+    padding: 2px;
+    border: 1px solid #CCC;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 3px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+input[type=text]:hover, input[type=pasword]:hover, select:hover, textarea:hover {
+    border: 1px solid #BBB;
+    background: #F8F8F8;
+}
+
+input[type=text]:focus, input[type=pasword]:focus, select:focus, textarea:focus {
+    border: 1px solid #BBB;
+    background: #F8F8F8;
+}
+
+label {
+    display: inline-block;
+    min-width: 80px;
+}
+
+input[type=button], input[type=submit] {
+    background: #18a13f;
+    border: none;
+    padding: 0 15px;
+    height: 25px;
+    color: #FFF;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+input[type=button]:hover, input[type=submit]:hover {
+    background: #139337;
+}
+
+body {
+    background: #242424 url(../img/body.jpg) repeat;
+}
+
+.Main {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1280px !important;
+    min-width: 240px !important;
+}
+
+.Container {
+    background: #d6d5d5;
+}
+
+.Container .PADD {
+    padding: 1%;
+}
+
+.Header {
+    padding-top: 45px;
+    border-bottom: 1px solid #BBB;
+    position: relative;
+}
+
+.Header h1 {
+    height: 48px;
+    font-size: 14px;
+    display: block;
+    color: #EEE;
+}
+
+.Header h1 A {
+    display: block;
+    font-size: 30px;
+    font-family: Arial,sans-serif;
+    line-height: 25px;
+    margin-bottom: 4px;
+    color: #AAA;
+}
+
+.BtnNavigations {
+    display: none;
+    background: #AAA url(../img/MenuBtn.png) no-repeat center center;
+    height: 30px;
+    position: relative;
+    clear: both;
+}
+
+.SocialWrapper {
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+.Social {
+    list-style: none;
+    position: relative;
+}
+
+.Social li {
+    background: #111;
+    width: 32px;
+    height: 32px;
+    float: right;
+    margin-left: 3px;
+}
+
+.Social li A {
+    display: block;
+    height: 100%;
+}
+
+.Social li.Contact {
+    background: #525252 url(../img/contact.png) 0 0 no-repeat;
+    display: none;
+}
+
+.Social li.Facebook {
+    background: #2365a3 url(../img/Social.png) right top no-repeat;
+}
+
+.Social li.Facebook:hover {
+    background: #256cb0 url(../img/Social.png) right top no-repeat;
+}
+
+.Social li.Twitter {
+    background: #40cdda url(../img/Social.png) -64px top no-repeat;
+}
+
+.Social li.Twitter:hover {
+    background: #42d7e5 url(../img/Social.png) -64px top no-repeat;
+}
+
+.Social li.Rss {
+    background: #f67900 url(../img/Social.png) -32px top no-repeat;
+}
+
+.Social li.Rss:hover {
+    background: #ff7f03 url(../img/Social.png) -32px top no-repeat;
+}
+
+.Social li.Search {
+    background: #18a23f url(../img/BtnSearch.png) right top no-repeat;
+    position: relative;
+    overflow: hidden;
+    -moz-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+.Social li.Search:hover {
+    background: #1bb246 url(../img/BtnSearch.png) right top no-repeat;
+}
+
+.Social .ClosedSearch {
+    height: 32px;
+    width: 32px;
+    float: right;
+    cursor: pointer;
+}
+
+.Social .OpenedSearch {
+    width: 200px !important;
+}
+
+.Social .BtnCloseSearch {
+    background: none;
+    width: 10px;
+    line-height: 8px;
+    text-align: center;
+    color: #18a23f;
+    position: relative;
+    display: none;
+    right: -2px;
+    cursor: pointer;
+}
+
+.Social .BtnCloseSearch span {
+    position: relative;
+    top: 12px;
+}
+
+.GlobalSearch {
+    width: 200px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    right: 32px;
+}
+
+.GlobalSearch input[type=button] {
+    float: right;
+    width: 30px;
+    height: 32px;
+    border: none;
+    font-size: 0;
+    background: none;
+}
+
+.GlobalSearch input[type=text] {
+    background: #078129;
+    width: 159px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    height: 30px;
+    border: none;
+    margin-top: 1px;
+    margin-left: 1px;
+    padding: 0 5px;
+    color: #FFF;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.GlobalSearch input[type=text]:hover, .GlobalSearch input[type=text]:focus {
+    border: none !important;
+    background: #078129 !important;
+}
+
+.Search-Navigation {
+    background: #e1e1e1;
+}
+
+.GlobalNav {
+    clear: both;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.GlobalNav ul {
+    list-style: none;
+}
+
+.GlobalNav ul li {
+    float: left;
+    height: 50px;
+    border-right: 1px solid #BBB;
+    background: #e1e1e1;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.GlobalNav ul li:hover {
+    background: #CCC;
+}
+
+.GlobalNav ul li A {
+    display: block;
+    height: 100%;
+    padding: 0 25px;
+    line-height: 50px;
+    color: #444;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    font-weight: bold;
+}
+
+.GlobalNav ul li A:hover {
+    -webkit-text-shadow: 0 1px 3px #777;
+    text-shadow: 0 1px 3px #777;
+}
+
+.GlobalNav ul ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 180px;
+    z-index: 1000;
+    background: #AAA;
+}
+
+.GlobalNav ul ul li {
+    float: none;
+    border: none;
+    background: #CCC;
+    height: 35px;
+    border-bottom: 1px solid #AAA;
+}
+
+.GlobalNav ul ul li A {
+    border: none;
+    line-height: 35px;
+}
+
+.GlobalNav ul ul li A.Sub {
+    background: url(../img/arrowright.png) no-repeat 94% 13px;
+}
+
+.GlobalNav ul ul li:hover {
+    background: #E5E5E5;
+}
+
+.GlobalNav ul ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+.GlobalNav ul li A.apmlfilter {
+    padding-left: 15px;
+    background: url(../../pics/apml.png) no-repeat left 14px;
+}
+
+.Content {
+    width: 74%;
+    margin-bottom: 10px;
+}
+
+.SideBar {
+    width: 25%;
+}
+
+.SideBar ul, .SideBar li {
+    list-style: none !important;
+    list-style-image: none !important;
+}
+
+.MainBox, #postnavigation, #relatedPosts, #commentlist, .commentForm, .Widget, #archive, #contact, .Content .calendar, #page {
+    position: relative;
+    background: #FFF;
+    -moz-box-shadow: 0 0 5px #AAA;
+    -webkit-box-shadow: 0 0 5px #AAA;
+    box-shadow: 0 0 5px #AAA;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.Post {
+}
+
+.Post:last-child {
+    margin: 0;
+}
+
+.Post .PostTitle {
+    background: #237da3;
+}
+
+.Post .PostTitle A, .Post .PostTitle A:visited {
+    display: block;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: Arial,sans-serif;
+    padding: 0 7px;
+    color: #FFF;
+}
+
+.Post .PostTitle A:hover {
+    color: #FFF;
+}
+
+.Post .Postdetail {
+    padding: 15px 18px;
+    color: #999;
+}
+
+.Post .Postdetail A {
+    color: #999;
+}
+
+.Post .Postdetail A:hover {
+    color: #237da3;
+}
+
+.Post .Postdetail .CommentLink {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    background: url(../img/commentlink.png) no-repeat left center;
+    z-index: 2;
+}
+
+.Post .Postdetail .CommentLink A {
+    color: #FFF !important;
+    padding: 0 0 0 20px;
+}
+
+.Post .Postdetail span {
+    padding-right: 5px;
+    color: #999;
+}
+
+.Post .PostBody {
+    padding: 4px 18px 10px;
+}
+
+.Post .PostFoot {
+    padding: 0px 18px 10px;
+}
+
+#postnavigation {
+    padding: 10px;
+    text-align: center;
+}
+
+#relatedPosts {
+}
+
+#relatedPosts A {
+    display: block;
+}
+
+#relatedPosts span {
+    color: #999;
+    font-size: 80%;
+}
+
+#relatedPosts h3 {
+    background: #237da3;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0 7px;
+    color: #FFF;
+}
+
+#relatedPosts div {
+    padding: 10px;
+}
+
+#commentlist {
+    padding: 10px;
+}
+
+h3#comment {
+    background: #18a13f;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0 7px;
+    color: #FFF;
+    position: relative;
+    z-index: 100;
+    -moz-box-shadow: 0 -1px 3px #AAA;
+    -webkit-box-shadow: 0 -1px 3px #AAA;
+    box-shadow: 0 -1px 3px #AAA;
+}
+
+.commentForm {
+    padding: 10px;
+    margin-top: 1px;
+}
+
+.commentForm #addcomment {
+    background: #18a13f;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0 7px 0 13px;
+    color: #FFF;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    position: relative;
+    left: -10px;
+    top: -10px;
+}
+
+#commenttoggle {
+    position: relative;
+    top: 1px;
+    color: #FFF;
+    border: none !important;
+    font-size: 15px !important;
+    padding: 0 !important;
+}
+
+.commentForm #commentCompose {
+    border: 1px solid #AAA;
+    background: #F1F1F1;
+    margin-top: -4px;
+}
+
+.commentForm #commentCompose textarea {
+    width: 99%;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+
+.Comment {
+}
+
+.bbcode {
+    text-align: right;
+    display: block;
+    text-align: right;
+}
+
+.bbcode a {
+    margin: 1px;
+    padding: 1px 3px 1px 3px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.Comment .ItemComment {
+    background: #F1F1F1;
+    margin-bottom: 5px;
+    padding: 5px;
+    line-height: 27px;
+}
+
+.Comment .ItemComment img {
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+}
+
+.Comment .comment-replies {
+    padding-left: 20px;
+}
+
+.Comment .comment-replies .ItemComment {
+    border-left: 3px solid #E4E4E4;
+    background: #f8f8f8;
+}
+
+.Comment .comment-replies #comment-form .commentForm {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #F1F1f1;
+}
+
+.Comment .ItemHeaerComment {
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 27px;
+}
+
+.Comment .ItemHeaerComment .PubCommentDate {
+    padding: 0 7px 0 0;
+    font-weight: 400;
+}
+
+.Comment .ItemHeaerComment .ItemNumComment {
+    padding: 0 3px;
+}
+
+.Comment .ItemHeaerComment .url {
+    font-size: 16px;
+}
+
+.Comment .Gravatar {
+    margin-right: 8px;
+}
+
+.Comment .Gravatar img {
+    position: relative;
+    top: 5px;
+}
+
+.Comment .content {
+}
+
+.Comment .self .ItemComment {
+    background: #c8fbcb !important;
+    border-left: 3px solid #18a13f !important;
+}
+
+.Comment .self .ItemComment A {
+    color: #008024;
+}
+
+.comment cite {
+    font-family: Monospace;
+    font-style: normal;
+}
+
+#commentPreview {
+    border: 1px solid #BBB;
+    position: relative;
+    top: -4px;
+}
+
+#commentMenu:after {
+    clear: both;
+    content: ' ';
+    height: 0;
+    display: block;
+}
+
+#commentMenu {
+    margin-bottom: 3px;
+}
+
+#commentMenu li {
+    float: left;
+    list-style: none;
+    border: 1px solid #CCC;
+    padding: 3px 18px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#commentMenu li.selected {
+    background: #F1F1F1;
+    border-bottom: none;
+    position: relative;
+    top: 0px;
+    border-color: #AAA;
+    height: 26px;
+    z-index: 100;
+}
+
+#commentPreview .Comment .ItemComment A {
+    color: #333;
+}
+
+#commentPreview .Comment .ItemComment {
+    border: none !important;
+    background: none !important;
+    color: #333 !important;
+    margin: 0 !important;
+}
+
+#commentPreview .ItemComment .content {
+    display: block;
+}
+
+.Widget {
+    margin-bottom: 10px;
+}
+
+.Widget .WidgetTitle {
+    background: #626262;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0 7px;
+    color: #FFF;
+}
+
+.Widget .WidgetContnet {
+    padding: 7px;
+}
+
+.administration ul {
+    list-style: none;
+}
+
+.administration ul li {
+    height: 25px;
+    margin-bottom: 1px;
+    line-height: 25px;
+    background: #F8F8F8;
+}
+
+.administration ul li A {
+    display: block;
+    height: 100%;
+    padding: 0 5px;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.administration ul li A:hover {
+    padding: 0px 10px;
+}
+
+#monthList {
+    list-style: none;
+}
+
+#monthList li ul {
+    display: none;
+    list-style: none;
+    margin-left: 15px;
+}
+
+#monthList li.year {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#monthList li.year ul li {
+    padding-left: 13px;
+    background: url(../img/ArrowRight.png) no-repeat left 6px;
+}
+
+#monthList ul.open {
+    display: block;
+}
+
+.pagelist ul li {
+    border-bottom: 1px dotted #CCC;
+    line-height: 27px;
+    list-style: none;
+}
+
+.pagelist ul li A {
+    height: 100%;
+    padding: 0px;
+    display: block;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.pagelist ul li A:hover {
+    padding: 0 5px;
+}
+
+#blogroll li {
+    list-style: none;
+    border-bottom: 1px dotted #CCC;
+    margin-bottom: 9px;
+    padding-bottom: 5px;
+}
+
+#blogroll li A img {
+    margin: 0 3px 0 0;
+}
+
+#blogroll li ul li {
+    margin-left: 16px;
+    margin-bottom: 0px;
+    border-bottom: none;
+    padding-bottom: 0px;
+    height: 22px;
+    line-height: 22px;
+}
+
+#blogroll li ul li A {
+    font-weight: normal;
+}
+
+.categorylist ul, .categorylist ul li {
+    list-style: none;
+}
+
+.categorylist ul li {
+    border-bottom: 1px dotted #CCC;
+    line-height: 27px;
+}
+
+.categorylist ul li A {
+    height: 100%;
+    padding: 0px;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.categorylist ul li A:hover {
+    padding: 0 5px;
+}
+
+.categorylist ul li img {
+    margin-right: 4px;
+}
+
+.linklist ul li {
+    border-bottom: 1px dotted #CCC;
+    line-height: 27px;
+}
+
+.linklist ul li A {
+    display: block;
+    height: 100%;
+    padding: 0 5px;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.linklist ul li A:hover {
+    padding: 0px 10px;
+}
+
+.visitorinfo .WidgetTitle img {
+    position: relative;
+    top: 7px;
+    font-size: 0;
+    margin-right: 3px;
+}
+
+.recentposts ul {
+    list-style: none;
+}
+
+.recentposts ul li A {
+    display: block;
+    padding-left: 12px;
+    background: url(../img/ArrowRight.png) no-repeat left 5px;
+}
+
+.recentposts ul li {
+    border-bottom: 1px dotted #CCC;
+    padding: 5px 0;
+}
+
+.recentposts ul li span {
+    padding: 0 10px 0 0;
+    font-size: 80%;
+    display: inline-block;
+    color: #666;
+}
+
+.tagcloud {
+}
+
+.tagcloud ul li {
+    list-style: none;
+    float: left;
+    padding: 0 10px;
+    line-height: 27px;
+    background: #eaf5fb;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+
+.tagcloud ul li a {
+    color: #237da3;
+    font-size: 100%;
+}
+
+.tagcloud ul li a.small {
+    font-size: 100%;
+}
+
+.tagcloud ul li a.smallest {
+    font-size: 70%;
+}
+
+.tagcloud ul li a.medium {
+    font-size: 110%;
+}
+
+.tagcloud ul li a.biggest {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.tagcloud ul:after {
+    content: ' ';
+    clear: both;
+    display: block;
+}
+
+.authorlist ul li img {
+    margin-right: 4px;
+}
+
+.authorlist ul li {
+    border-bottom: 1px dotted #CCC;
+    line-height: 27px;
+}
+
+.authorlist ul li A {
+    height: 100%;
+    padding: 0px;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.authorlist ul li A:hover {
+    padding: 0 5px;
+}
+
+.bloglist ul li {
+    border-bottom: 1px dotted #CCC;
+    line-height: 27px;
+}
+
+.bloglist ul li A {
+    display: block;
+    height: 100%;
+    padding: 0 5px;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.bloglist ul li A:hover {
+    padding: 0 10px;
+}
+
+.recentcomments ul li {
+    border-bottom: 1px dotted #CCC;
+    padding: 7px 0;
+    color: #888;
+    font-size: 10px;
+    text-align: left;
+}
+
+.recentcomments ul li A {
+    color: #888;
+}
+
+.recentcomments h4 {
+    text-align: left;
+}
+
+.recentcomments ul li A.postTitle {
+    padding-left: 12px;
+    background: url(../img/ArrowRight.png) no-repeat left 3px;
+    color: #054275;
+    font-size: 13px;
+}
+
+.recentcomments ul li A.moreLink {
+    font-size: 10px;
+    color: #888;
+}
+
+.recentcomments {
+    text-align: right;
+}
+
+#calendarContainer {
+    text-transform: capitalize;
+    margin: 0 auto;
+}
+
+.calendar {
+    border: none;
+}
+
+.Content .calendar A {
+    font-size: 10px;
+}
+
+.calendar table {
+    width: 100%;
+}
+
+.calendar .weekend {
+    background-color: #F1F1F1;
+}
+
+.calendar .other {
+    color: silver;
+}
+
+.calendar a.exist {
+    display: block;
+    font-weight: bold;
+    background-color: #F1F1F1;
+}
+
+.calendar td {
+    vertical-align: top;
+    background: white;
+}
+
+#contact {
+    padding: 12px;
+}
+
+#contact h1 {
+    background: #237da3;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0 7px;
+    color: #FFF;
+    position: relative;
+    z-index: 100;
+    margin-top: -12px;
+    margin-bottom: 10px;
+    padding: 0 12px;
+    position: relative;
+    left: -12px;
+    width: 100%;
+}
+
+#contact textarea {
+    width: 100%;
+}
+
+#archive {
+    padding: 12px;
+}
+
+#archive h1 {
+    background: #237da3;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0 7px;
+    color: #FFF;
+    position: relative;
+    z-index: 100;
+    margin-top: -12px;
+    margin-bottom: 10px;
+    padding: 0 12px;
+    position: relative;
+    left: -12px;
+    width: 100%;
+}
+
+#archive h2 img {
+    margin-right: 3px;
+}
+
+#archive ul {
+    list-style-type: square;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+#archive ul li {
+    margin-right: 20px;
+}
+
+#archive table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#archive table td, #archive table th {
+    text-align: left;
+}
+
+#archive table td {
+    text-align: left;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 2px 0;
+    font-size: 95%;
+}
+
+#archive .date {
+    width: 70px;
+}
+
+#archive .comments {
+    width: 70px;
+    text-align: center;
+}
+
+#archive .rating {
+    width: 70px;
+    text-align: center;
+}
+
+.searchpage {
+    position: relative;
+    background: #FFF;
+    -moz-box-shadow: 0 0 5px #AAA;
+    -webkit-box-shadow: 0 0 5px #AAA;
+    box-shadow: 0 0 5px #AAA;
+    color: #333;
+    margin-bottom: 15px;
+    padding: 12px;
+}
+
+.searchpage h1 {
+    background: #237da3;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0 7px;
+    color: #FFF;
+    position: relative;
+    z-index: 100;
+    margin-top: -12px;
+    margin-bottom: 10px;
+    padding: 0 12px;
+    position: relative;
+    left: -12px;
+    width: 100%;
+}
+
+#searchpage {
+    margin-bottom: 30px;
+}
+
+#searchpage input#q {
+    width: 300px;
+    margin-right: 6px;
+}
+
+#searchpage input#comment {
+    clear: both;
+}
+
+.searchresult {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #EEE;
+    padding-bottom: 20px;
+}
+
+.searchresult a {
+    font-weight: bold;
+}
+
+.searchresult span.text {
+    clear: both;
+    display: block;
+    margin: 3px 0;
+}
+
+.searchresult span.type {
+    display: block;
+}
+
+.searchresult span.url {
+    color: Gray;
+}
+
+.searchpage ul.paging {
+    list-style-type: none;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 0px;
+}
+
+.searchpage ul.paging li {
+    display: inline;
+    border: 1px solid gray;
+    background: #f1f1f1;
+    margin-right: 5px;
+}
+
+.searchpage ul.paging li a {
+    padding: 5px 8px;
+}
+
+.searchpage ul.paging li.active {
+    background: #f1f1f1;
+    border: 1px solid black;
+}
+
+.Widget #searchbox input[type=text] {
+    margin-right: 4px;
+}
+
+#page {
+    padding: 12px;
+}
+
+h1[id*='_h1Title'] {
+    background: #237da3;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 0 7px;
+    color: #FFF;
+    position: relative;
+    z-index: 100;
+    margin-top: -12px;
+    margin-bottom: 10px;
+    padding: 0 12px;
+    position: relative;
+    left: -12px;
+    width: 100%;
+}
+
+#PostPager {
+    margin: 15px 0;
+}
+
+#page #admin {
+    border-top: 1px solid silver;
+    margin-top: 10px;
+    padding: 5px 0 0;
+}
+
+#disqus_thread {
+    position: relative;
+    background: #FFF;
+    -moz-box-shadow: 0 0 5px #AAA;
+    -webkit-box-shadow: 0 0 5px #AAA;
+    box-shadow: 0 0 5px #AAA;
+    color: #333;
+    margin-bottom: 15px;
+    padding: 12px;
+}
+
+#disqus_thread ul li, #disqus_thread li {
+    list-style: none !important;
+}
+
+#page #disqus_thread {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 1px;
+    border-top: 2px solid #AAA;
+}
+
+#q-toggle .open, #q-toggle .close {
+    background: #FFF;
+    padding: 5px 5px 0;
+}
+
+#q-panel textarea {
+    height: 70px !important;
+    min-height: 70px;
+}
+
+#q-panel {
+    height: 150px;
+    border: none;
+}
+
+#q-panel textarea, #q-panel input, #q-panel select {
+    border-radius: 0;
+}
+
+#q-panel input[type=submit] {
+    background: #18a13f !important;
+    border: none !important;
+    line-height: 20px !important;
+    color: #FFF;
+    font-weight: normal;
+}
+
+#layer {
+    z-index: 310 !important;
+}
+
+#apmlfilter {
+    z-index: 312 !important;
+}
+
+.Footer {
+    color: #666;
+    background: #555;
+    color: #AAA;
+    margin-bottom: 30px;
+    position: relative;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+}
+
+.Footer .ClearFix {
+    padding: 10px;
+}
+
+.Footer A {
+    color: #AAA;
+}
+
+.Footer A:hover {
+    text-decoration: underline;
+}
+
+.Footer .Left {
+    position: relative;
+    top: 5px;
+}
+
+.Footer #BackTop {
+    background: url(../img/UP.png) 0 0 no-repeat;
+    width: 29px;
+    height: 29px;
+    font-size: 0;
+    cursor: pointer;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.Footer #BackTop:hover {
+    background: url(../img/UP.png) 0 -29px no-repeat;
+}
+
+@media (max-width:1024px) {
+    .Main {
+        width: 98%;
+    }
+
+    .Container {
+        font: 14px Arial;
+    }
+
+    .Header {
+        padding-top: 10px;
+        border-bottom: 1px solid #BBB;
+    }
+
+    .Content {
+        width: 70%;
+    }
+
+    .SideBar {
+        width: 29%;
+    }
+
+    .recentcomments ul li A.postTitle {
+        font-size: 14px;
+    }
+
+    .SocialWrapper {
+        top: 27px;
+    }
+}
+
+@media (max-width:800px) {
+    .Main {
+        width: 100%;
+    }
+
+    .Container {
+        font: 14px Arial;
+    }
+
+    .Header .Line1 {
+        padding: 0 10px;
+    }
+
+    .SocialWrapper {
+        right: 8px;
+    }
+
+    .Content {
+        width: 62%;
+    }
+
+    .SideBar {
+        width: 37%;
+    }
+
+    .Footer {
+        margin: 0;
+    }
+
+    .Comment .Gravatar img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .MainBox, #postnavigation, #relatedPosts, #commentlist, .commentForm, .Widget, #archive, #contact, .Content .calendar, #page {
+        margin-bottom: 10px;
+    }
+
+    .CommentLink {
+        display: none;
+    }
+}
+
+@media (max-width:640px) {
+    .Header .Line1 {
+        padding: 0 10px;
+    }
+
+    .Header h1 {
+        position: relative;
+        top: 8px;
+        margin-bottom: 20px;
+    }
+
+    .SocialWrapper {
+        top: 8px;
+        right: 8px;
+    }
+
+    .Social {
+        top: 0px;
+    }
+
+    .Social li {
+        margin-bottom: 3px;
+    }
+
+    .Social li.Rss {
+        clear: both;
+    }
+
+    .GlobalNav {
+        margin-top: 7px;
+    }
+
+    .Content {
+        width: 100%;
+        float: none;
+    }
+
+    .SideBar {
+        width: 100%;
+        float: none;
+    }
+
+    .MainBox, #postnavigation, #relatedPosts, #commentlist, .commentForm, .Widget, #archive, #contact, .Content .calendar, #page {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width:570px) {
+    .Header {
+        padding-top: 2px;
+        text-align: center;
+    }
+
+    .Header h1 {
+        height: 50px;
+        width: 100%;
+    }
+
+    .BtnNavigations {
+        display: block;
+        cursor: pointer;
+    }
+
+    .Social li.Contact {
+        display: block;
+    }
+
+    .Search-Navigation {
+        margin: 0;
+        height: 100px;
+        background: #e1e1e1;
+    }
+
+    .GlobalNav {
+        margin: 0;
+        height: 50px;
+    }
+
+    .GlobalNav ul li {
+        width: 25%;
+        border: none;
+        text-align: center;
+        border-bottom: 1px solid #CCC;
+    }
+
+    .GlobalNav ul li A {
+        border-right: 1px solid #CCC;
+        padding: 0;
+    }
+
+    .GlobalNav ul li.APML A {
+        border-right: none;
+    }
+
+    .GlobalNav ul li.Contact {
+        display: none;
+    }
+
+    .SocialWrapper {
+        top: 132px;
+        z-index: 300;
+        overflow: hidden;
+    }
+
+    .Social li.Rss {
+        clear: none;
+    }
+
+    .Social li.Search {
+        width: 200px !important;
+    }
+
+    .Social li.Search #BtnShow {
+        display: none !important;
+    }
+
+    .GlobalSearch {
+        right: 0 !important;
+        width: 200px;
+    }
+
+    .GlobalSearch input[type=text] {
+        width: 159px;
+    }
+
+    .MainBox, #postnavigation, #relatedPosts, #commentlist, .commentForm, .Widget, #archive, #contact, .Content .calendar, #page {
+        margin-bottom: 5px;
+    }
+
+    #archive .rating, #archive .comments {
+        display: none;
+    }
+
+    .Footer .Seyfolahi {
+        display: block;
+    }
+
+    .Footer .Left {
+        top: 0;
+    }
+
+    .Footer .Right {
+        position: relative;
+        top: 5px;
+    }
+
+    .Footer .Separate {
+        display: none;
+    }
+     .SideBar {
+        display:none;
+    }
+}
+
+@media (max-width:360px) {
+    .GlobalNav ul li {
+        width: 33.33%;
+    }
+
+    .GlobalNav ul li.Login {
+        border-right: none;
+    }
+
+    .GlobalNav ul li.APML {
+        display: none;
+    }
+
+    .Social li.Search #BtnShow {
+        display: none !important;
+    }
+
+    .Social li.Search {
+        width: 148px !important;
+    }
+
+    .GlobalSearch {
+        right: 0 !important;
+        width: 148px;
+    }
+
+    .GlobalSearch input[type=text] {
+        width: 106px;
+    }
+
+    .Footer .ClearFix {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .Footer .Right {
+        top: 0px;
+    }
+
+    .MainBox, #postnavigation, #relatedPosts, #commentlist, .commentForm, .Widget, #archive, #contact, .Content .calendar, #page {
+        margin-bottom: 5px;
+    }
+
+    .Footer .Separate {
+        display: none;
+    }
+
+   
+}
+
+@media (max-width:320px) {
+    .Header h1 A {
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    .Header h1 span {
+        display: none;
+    }
+
+    .Social li.Search {
+        width: 148px !important;
+    }
+
+    .GlobalSearch {
+        right: 0 !important;
+        width: 148px;
+    }
+
+    .GlobalSearch input[type=text] {
+        width: 106px;
+    }
+
+    .MainBox, #postnavigation, #relatedPosts, #commentlist, .commentForm, .Widget, #archive, #contact, .Content .calendar, #page {
+        margin-bottom: 5px;
+    }
+
+    .Footer {
+        text-align: center;
+    }
+
+    .Footer .Right {
+        display: none;
+    }
+
+    .Footer .Left {
+        float: none;
+    }
+
+    .Footer .second {
+        display: block;
+    }
+}
+
+@media (max-width:318px) {
+    .Social li.Facebook, .Social li.Twitter, .Social li.Rss {
+        display: none;
+    }
+}
+
+@media print {
+    body {
+        color: #000 !important;
+        background: #FFF !important;
+    }
+
+    a, a:link, a:visited {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+
+    .Content {
+        width: 100% !important;
+    }
+
+    .SideBar {
+        display: none !important;
+    }
+}

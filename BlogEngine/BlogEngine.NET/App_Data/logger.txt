@@ -1,0 +1,13 @@
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 3/30/2017 3:12:21 AM
+PUT http://localhost:64079/api/settings: Violation of UNIQUE KEY constraint 'AK_SettingName'. Cannot insert duplicate key in object 'dbo.be_Settings'. The duplicate key value is (27604f05-86ad-47ef-9e05-950bb762570c, enablereferrertracking).
+The statement has been terminated.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 3/30/2017 3:13:41 AM
+Installed package JustBlog by admin
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 3/30/2017 3:14:35 AM
+Installed package SimpleBlog by admin
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 3/30/2017 3:15:40 AM
+Installed package ElegantBlog by admin

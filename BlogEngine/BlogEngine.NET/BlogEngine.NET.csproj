@@ -21,7 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -611,6 +611,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="FrontPageExample.aspx" />
+    <Content Include="google8c0106fce8660e95.html" />
     <Content Include="packages.config" />
     <Content Include="Content\images\blog\ext.png" />
     <Content Include="Content\images\blog\pkg.png" />
@@ -792,6 +793,7 @@
     <Content Include="Custom\Themes\Standard\src\fonts\fontawesome-webfont.woff" />
     <Content Include="Custom\Themes\Standard\src\fonts\fontawesome-webfont.woff2" />
     <Content Include="Custom\Themes\Standard\src\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\blogengine07 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1608,7 +1610,7 @@
     <Content Include="setup\SQLServer\Archive\MSSQLSetup3.1.0.0.sql" />
     <Content Include="setup\SQLServer\Upgrade.sql" />
     <Content Include="setup\SQLServer\Archive\MSSQLUpgradeFrom3.0to3.1.sql" />
-    <Content Include="setup\SQLServer\DbWeb.Config" />
+    <Content Include="Web.Config" />
     <Content Include="setup\SQL_CE\Archive\SQL_CE_Setup_3.1.sql" />
     <Content Include="setup\SQL_CE\Archive\SQL_CE_UpgradeFrom3.0to3.1.sql" />
     <Content Include="setup\SQL_CE\BlogEngine.sdf" />
@@ -1628,11 +1630,12 @@
     <Content Include="setup\Web.config" />
     <Content Include="Scripts\version.json" />
     <Content Include="setup\MySQL\MySQLWeb.Config" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="setup\SQLServer\DbWeb - Copy.Config" />
+    <None Include="WebXML.Debug.config">
+      <DependentUpon>WebXML.config</DependentUpon>
     </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <None Include="WebXML.Release.config">
+      <DependentUpon>WebXML.config</DependentUpon>
     </None>
     <Content Include="Web.sitemap" />
   </ItemGroup>
@@ -1828,7 +1831,7 @@
     <Content Include="Custom\Controls\Defaults\CommentForm.ascx" />
     <Content Include="Custom\Controls\Defaults\PostNavigation.ascx" />
     <Content Include="Custom\Controls\PostList.ascx" />
-    <Content Include="Web.config">
+    <Content Include="WebXML.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="wlwmanifest.xml" />

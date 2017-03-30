@@ -1,0 +1,79 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="StandardSite" %>
+<%@ Import Namespace="BlogEngine.Core" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="styles/Base.min.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="~/pics/blogengine.ico" type="image/x-icon" />
+    <!--[if lt IE 9]>
+        <script src="/Custom/ThemesElegantBlog/styles/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <form runat="Server">
+
+        <header class="Main Header">
+            <div class="ClearFix Line1">
+                <h1 class="Left ClearFix">
+                    <a href="<%=Utils.AbsoluteWebRoot %>"><%=BlogSettings.Instance.Name %></a>
+                    <span><%=BlogSettings.Instance.Description %></span>
+                </h1>
+            </div>
+            <div class="Search-Navigation">
+                <div class="SocialWrapper">
+                    <ul class="Social">
+                        <li class="Contact"><a href="<%=Utils.AbsoluteWebRoot %>contact.aspx"></a></li>
+                        <li class="Facebook"><a href="http://facebook.com/" title="Follow me on Facebook!"></a></li>
+                        <li class="Twitter"><a href="http://twitter.com/" title="Follow me on Twitter!"></a></li>
+                        <li class="Rss"><a href="<%=Utils.FeedUrl %>"></a></li>
+                        <li class="Search">
+                            <div id="BtnShow" class="ClosedSearch"></div>
+                            <div class="GlobalSearch">
+                                <blog:SearchBox ID="SearchBox1" runat="Server" />
+                            </div>
+                        </li>
+                        <li class="BtnCloseSearch"><span>x</span></li>
+                    </ul>
+                </div>
+                <nav class="GlobalNav">
+                    <ul>
+                        <li class="Home"><a href="<%=Utils.AbsoluteWebRoot %>" rel="home"><%=Resources.labels.home %></a></li>
+                        <li class="Archive"><a href="<%=Utils.AbsoluteWebRoot %>archive<%= BlogEngine.Core.BlogConfig.FileExtension %>"><%=Resources.labels.archive %></a></li>
+                        <li class="Contact"><a href="<%=Utils.AbsoluteWebRoot %>contact<%= BlogEngine.Core.BlogConfig.FileExtension %>"><%=Resources.labels.contact %></a></li>
+                        <li class="Login"><span runat="server" id="aUser" style="display: none;"></span><a runat="server" id="aLogin" /></li>
+                        <li class="APML"><a href="javascript:void(BlogEngine.filterByAPML())" class="apmlfilter"><%=Resources.labels.filterByApml %></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="Container Main ClearFix">
+            <div class="PADD">
+                <section class="Content Left">
+                    <blog:SearchOnSearch runat="server" MaxResults="3" Headline="You searched for" Text="Here are some results for the search term on this website" />
+                    <asp:ContentPlaceHolder ID="cphBody" runat="server" />
+                </section>
+                <aside class="SideBar Right">
+                    <blog:WidgetZone runat="server" ZoneName="be_WIDGET_ZONE" />
+                </aside>
+            </div>
+        </section>
+
+        <footer class="Footer Main">
+            <div class="ClearFix">
+                <div class="Left">
+                    <span class="first">&copy; <%=DateTime.Now.Year %> All rights reserved.</span>
+                    <span class="second">Powered by <a href="http://dotnetblogengine.net" target="_blank">BlogEngine.NET</a> <%=BlogSettings.Instance.Version() %></span>
+                    <span class="Separate">| </span>
+                    <span class="Seyfolahi">Design by <a href="http://seyfolahi.net/" title="UI/UX Designer - Farzin Seyfolahi (@Seyfolahi)" target="_blank">Farzin Seyfolahi</a></span>
+                </div>
+                <span class="Right" id="BackTop"></span>
+            </div>
+        </footer>
+
+        <script src="<%=(Utils.RelativeWebRoot + "Custom/Themes" + BlogSettings.Instance.Theme + "/styles/scripts.js")%>" type="text/javascript"></script>
+    </form>
+</body>
+</html>
